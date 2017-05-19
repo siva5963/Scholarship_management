@@ -1,0 +1,96 @@
+<html>
+<head>
+<script>
+function sval()
+{
+	if(document.form.name.value=="")
+	{
+		alert("please enter name");
+		document.form.name.focus();
+		return false;
+	}
+	if(document.form.name1.value=="")
+	{
+		alert("please enter surname");
+		document.form.name1.focus();
+		return false;
+	}
+	if(document.form.r1[0].checked==false && document.form.r1[1].checked==false)
+	{
+		alert("select gender");
+		document.form.r1.focus();
+		return false;
+	}
+	if(document.form.dob.value=="")
+	{
+		alert("select date of birth");
+		document.form.dob.focus();
+		return false;
+	}
+	if(document.form.email.value=="")
+	{
+		alert("please  enter email");
+		document.form.email.focus();
+		return false;
+	}
+	if(document.form.pwd.value=="")
+	{
+		alert("enter passwod");
+		document.form.pwd.focus();
+		return false;
+	}
+	if(document.form.pwd1.value=="")
+	{
+		alert("enter conform passwod");
+		document.form.pwd1.focus();
+		return false;
+	}
+	if((document.form.pwd.value)!=(document.form.pwd1.value))
+	{
+		alert("both passwods are not match");
+	}
+	if(document.form.add.value=="")
+	{
+		alert("enter your address");
+		document.form.pwd1.focus();
+		return false;
+	}
+	if(document.form.institute.checked==false)
+	{
+		alert("select institute");
+		document.form.institute.focus();
+		return false;
+	}
+	
+	return true;
+}
+</script>
+</head>
+<body background="middle.jpg">
+<form name="form" action="stureg.jsp">
+<h1 align="center">Student Registration Page</h1>
+<center>
+<table>
+<tr><td>student_id</td><td> <input type="text" name="sid"></td></tr><br>
+<tr><td>student_name</td><td> <input type="text" name="name"></td></tr><br>
+<tr><td>surename</td><td> <input type="text" name="name1"></td></tr><br>
+<tr><td>gender</td><td> <select name="r1">
+<option value="male" />male
+<option value="female" />female
+</select></td></tr><br>
+<tr><td>dob(dd/mon/yyyy)</td><td> <input type="text" name="dob"></td></tr><br>
+<tr><td>email </td><td><input type="email" name="email"></td></tr><br>
+<tr><td>password</td><td><input type="password" name="pwd"></td></tr><br>
+<tr><td>conform_passwod</td><td><input type="password" name="pwd1"></td></tr><br>
+<tr><td>address</td><td><input type="textarea" name="add"></td></tr><br>
+<tr><td>institute_name</td><td><select name="institute">
+<option value="svec" />svec
+<option value="svce" />svce
+<option value="svim" />svim
+</select></td></tr><br>
+<tr><td><input type="submit" value="register" onclick="sval()"></td>
+<td><a href="slogin.html"><input type="button" value="login"></a></td></tr>
+</table></center>
+</form>
+</body>
+</html>

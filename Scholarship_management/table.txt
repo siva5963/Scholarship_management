@@ -1,0 +1,14 @@
+create table scholarship (sch_id varchar(100) primary key,
+stu_id references student,clgn varchar(200),doa date, percentage varchar(500));
+
+create table student(stu_id varchar(200) primary key,student_name varchar(200),surname varchar(200),
+gender varchar(100),dob date,email varchar2(200),
+password varchar2(200),conform_password varchar2(200),
+address varchar2(200),institute varchar2(200));
+
+
+create table feedback(mobileno number(10),stu_id references student,sname varchar(200),
+feedback varchar(200));
+
+create table institute(id number(20) primary key,institite_name varchar(200),
+contact_no number(10),email varchar(100),faxno number(10));

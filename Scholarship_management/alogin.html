@@ -1,0 +1,38 @@
+<html>
+<html>
+	<head>
+		<script type="text/javascript">
+		function val()
+		{
+			
+			if(document.form.email.value==""  )
+			{
+				
+				alert("please enter name");
+				document.form.email.focus();
+				return false;
+			}
+			if(document.form.pwd.value=="")
+			{
+					alert("please enter password");
+				document.form.pwd.focus();
+				return false;
+			}
+			return true;
+		}
+		</script>
+	</head>
+	<body background="middle.jpg">
+	<h1 align="center">Admin login page</h1>
+	<form method="post" name="form" action="admin.jsp" >
+	<center>
+	<table>
+	<tr><td>username:</td><td><input type="text" name="email"></td></tr><br>
+	<tr><td>password:</td><td><input type="password" name="pwd"></td></tr><br>
+	<tr><td><input type="submit" value="login" onclick="val();"></td>
+</tr><br>
+	</table>
+	</center>
+	</form>
+	</body>
+</html>
